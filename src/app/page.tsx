@@ -1,101 +1,175 @@
 import Image from "next/image";
+import Cards from '@/components/cards';
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+    <main className="bg-slate-100 font-sans">
+      <section className="flex flex-col md:flex-row justify-center p-8 gap-4">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="bg-blue-400 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4" style={{ backgroundImage: 'url(/images/BG1.png)' }}>
+
+          <div className="w-full h-full">
+
+            <h1 className="text-white text-2xl md:text-3xl font-bold">The Best Platform <br />  for Car Rental</h1>
+            <p className="text-white text-sm md:text-base mt-2">Ease of doing a car rental safely and reliably, Of course at a low price</p>
+
+            <button className="bg-blue-700 px-5 py-3 rounded-sm text-white mt-4">Rental Car</button>
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+
+        <div className="bg-blue-600 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4" style={{ backgroundImage: 'url(/images/BG2.png)' }}>
+
+          <div className="w-full h-full" >
+
+            <h1 className="text-white text-2xl md:text-3xl font-bold">Easy way to rent a <br /> car at a low prices</h1>
+            <p className="text-white text-sm md:text-base mt-2">Providing cheap car rental services and safe and comfortable facilities</p>
+
+            <button className="bg-blue-400 px-5 py-3 rounded-sm text-white mt-4">Rental Car</button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-6 gap-4">
+
+        {/* left */}
+        <div className="bg-white w-full md:w-[582px] rounded-lg p-4">
+
+          <div className="flex items-center mb-4">
+            <Image src={'/images/mark.png'} alt="" width={10} height={10} className="w-4 h-4 mr-2" />
+            <h1 className="font-semibold text-sm">Pick-Up</h1>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-around gap-4">
+            <div>
+              <h1 className="font-extrabold text-base">Locations</h1>
+              <div className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                <button type="button" id="dropdownToggle"
+                  className="py-2.5  text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your city
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-slate-300 w-[2px]"></div>
+
+            <div>
+              <h1 className="font-bold">Date</h1>
+              <div className="relative font-[sans-serif]">
+                <button type="button" id="dropdownToggle"
+                  className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your date
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-slate-300 w-[2px]"></div>
+
+            <div>
+              <h1 className="font-bold">Time</h1>
+              <div className="relative font-[sans-serif]">
+                <button type="button" id="dropdownToggle"
+                  className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your time
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* between */}
+        <div className="flex bg-blue-600 rounded-md justify-center items-center w-[60px] h-[60px]">
+          <Image src={'/images/Switch.png'} alt="" width={100} height={100} className="w-6 h-6 " />
+        </div>
+
+        {/* right */}
+        <div className="bg-white w-full md:w-[582px] rounded-lg p-4">
+
+          <div className="flex items-center mb-4">
+            <Image src={'/images/mark.png'} alt="" width={10} height={10} className="flex items-center mb-4 opacity-15" />
+            <h1 className="font-semibold text-sm">Drop-Off</h1>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-around gap-4">
+            <div>
+              <h1 className="font-extrabold text-base">Locations</h1>
+              <div className="relative font-[sans-serif]">
+                <button type="button" id="dropdownToggle"
+                  className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your city
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-slate-300 w-[2px]"></div>
+
+            <div>
+              <h1 className="font-bold">Date</h1>
+              <div className="relative font-[sans-serif]">
+                <button type="button" id="dropdownToggle"
+                  className=" py-2.5  text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your date
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-slate-300 w-[2px]"></div>
+
+            <div>
+              <h1 className="font-bold">Time</h1>
+              <div className="relative font-[sans-serif]">
+                <button type="button" id="dropdownToggle"
+                  className="py-2.5  text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
+                  Select your time
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-3 fill-gray-500 inline ml-3" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                      clip-rule="evenodd" data-original="#000000" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <Cards />
+      </section>    
+    </main>
+    <Footer />
+    </>
+
   );
 }
