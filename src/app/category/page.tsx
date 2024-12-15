@@ -20,7 +20,7 @@ export default function Category() {
                             <h1 className="font-semibold text-sm">Pick-Up</h1>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row justify-around gap-4">
+                        <div className="flex  sm:flex-row justify-around gap-4">
                             <div>
                                 <h1 className="font-extrabold text-base">Locations</h1>
                                 <div className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
@@ -74,7 +74,7 @@ export default function Category() {
                     </div>
 
                     {/* between */}
-                    <div className="flex bg-blue-600 rounded-md justify-center items-center w-[40px] h-[40px]">
+                    <div className=" sm:flex bg-blue-600 rounded-md justify-center items-center w-[40px] h-[40px]">
                         <Image src={'/images/Switch.png'} alt="" width={100} height={100} className="w-[50px] h-[40px] " />
                     </div>
 
@@ -86,7 +86,7 @@ export default function Category() {
                             <h1 className="font-semibold text-sm">Drop-Off</h1>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row justify-around gap-4">
+                        <div className="flex sm:flex-row justify-around gap-4">
                             <div>
                                 <h1 className="font-extrabold text-base">Locations</h1>
                                 <div className="relative font-[sans-serif]">

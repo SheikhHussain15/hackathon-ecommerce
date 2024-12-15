@@ -8,7 +8,7 @@ export default function Home() {
     <main className="bg-slate-100 font-sans">
       <section className="flex flex-col md:flex-row justify-center p-8 gap-4">
 
-        <div className="bg-blue-400 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4" style={{ backgroundImage: 'url(/images/BG1.png)' }}>
+        <div className="bg-blue-400 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4 bg-center" style={{ backgroundImage: 'url(/images/BG1.png)' }}>
 
           <div className="w-full h-full">
 
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
 
-        <div className="bg-blue-600 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4" style={{ backgroundImage: 'url(/images/BG2.png)' }}>
+        <div className="bg-blue-600 w-full md:w-[640px] h-[360px] rounded-md py-5 px-4 bg-center" style={{ backgroundImage: 'url(/images/BG2.png)' }}>
 
           <div className="w-full h-full" >
 
@@ -35,7 +35,7 @@ export default function Home() {
       </section>
 
 
-      <section className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-6 gap-4">
+      <section className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-6 gap-4 lg:justify-around">
 
         {/* left */}
         <div className="bg-white w-full md:w-[582px] rounded-lg p-4">
@@ -45,7 +45,7 @@ export default function Home() {
             <h1 className="font-semibold text-sm">Pick-Up</h1>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-around gap-4">
+          <div className="flex sm:flex-row justify-around gap-4">
             <div>
               <h1 className="font-extrabold text-base">Locations</h1>
               <div className="py-2.5 text-slate-400 text-xs outline-none bg-white hover:bg-gray-50">
@@ -111,7 +111,7 @@ export default function Home() {
             <h1 className="font-semibold text-sm">Drop-Off</h1>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-around gap-4">
+          <div className="flex sm:flex-row justify-around gap-4">
             <div>
               <h1 className="font-extrabold text-base">Locations</h1>
               <div className="relative font-[sans-serif]">

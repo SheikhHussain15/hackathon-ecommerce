@@ -6,7 +6,7 @@ import Reviews from "@/components/reviews";
 
 export default function Cardetails() {
     return (
-        <>
+        <div>
             <main className="flex flex-col md:flex-row font-sans p-5 gap-5">
                 {/* Sidebar */}
                 <div className="hidden md:flex w-auto">
@@ -20,8 +20,7 @@ export default function Cardetails() {
                         <div className="flex flex-col items-center lg:items-start">
                             <div
                                 className="bg-blue-600 w-full lg:w-[462px] h-[360px] rounded-md py-5 px-4 bg-center bg-cover"
-                                style={{ backgroundImage: 'url(/images/BG2.png)' }}
-                            >
+                                style={{ backgroundImage: 'url(/images/BG2.png)' }}>
                                 <div className="w-full lg:w-3/5">
                                     <h1 className="text-white text-xl lg:text-3xl font-bold mb-5">
                                         Sports car with the best design and acceleration
@@ -36,25 +35,17 @@ export default function Cardetails() {
                             <div className="flex justify-between mt-5 gap-3">
                                 <Image
                                     src={'/images/View 1.png'}
-                                    alt="View 1"
+                                    alt="View1"
                                     width={100}
                                     height={100}
-                                    className="h-[124px] w-[148px] object-cover"
-                                />
-                                <Image
-                                    src={'/images/View 2.png'}
-                                    alt="View 2"
-                                    width={100}
-                                    height={100}
-                                    className="h-[124px] w-[148px] object-cover"
-                                />
+                                    className="h-[124px] w-[148px] object-cover"/>
+                                <Image src={'/images/View 2.png'} alt="View 2" width={100} height={100} className="h-[124px] w-[148px] object-cover"/>
                                 <Image
                                     src={'/images/View 3.png'}
                                     alt="View 3"
                                     width={100}
                                     height={100}
-                                    className="h-[124px] w-[148px] object-cover"
-                                />
+                                    className="h-[124px] w-[148px] object-cover"/>
                             </div>
                         </div>
 
@@ -67,11 +58,10 @@ export default function Cardetails() {
                                     alt="Reviews"
                                     width={100}
                                     height={100}
-                                    className="mt-3 h-[24px] w-auto"
-                                />
-                                <p className="text-slate-400 text-sm lg:text-base mt-5">
-                                    NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
-                                </p>
+                                    className="mt-3 h-[24px] w-auto"/>
+                               <p className="text-slate-400 text-sm lg:text-base mt-5">
+    NISMO has become the embodiment of Nissan&apos;s outstanding performance, inspired by the most unforgiving proving ground, the &quot;race track&quot;.
+</p>
 
                                 {/* Specifications */}
                                 <div className="flex flex-wrap gap-4 mt-8">
@@ -112,6 +102,6 @@ export default function Cardetails() {
                 </div>
             </main>
             <Footer />
-        </>
+        </div>
     );
 }

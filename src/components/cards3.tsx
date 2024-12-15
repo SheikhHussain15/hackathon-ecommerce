@@ -21,14 +21,7 @@ export default function Cards3() {
       {/* Car Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cars.map((car, index) => (
-          <CarCard
-            key={index}
-            name={car.name}
-            price={car.price}
-            type={car.type}
-            imgSrc={car.imgSrc}
-            litre={car.litre}
-            space={car.space}
+          <CarCard key={index} name={car.name} price={car.price} type={car.type} imgSrc={car.imgSrc} litre={car.litre} space={car.space}
           />
         ))}
       </div>
