@@ -1,20 +1,20 @@
-import Image from "next/image"
-
+import Image from "next/image";
+import Footer from '@/components/footer';
 export default function Payment() {
     return (
-        <main className="bg-slate-100 font-sans flex flex-row">
+        <main className="bg-slate-100 font-sans flex flex-col-reverse justify-center  lg:flex-row ">
             {/* Left Div */}
-            <div className="w-3/5 flex flex-col">
+            <div className="flex flex-col justify-center w-screen">
 
                 {/* Step 01 */}
-                <div className="flex flex-col bg-white p-5 m-5 rounded-md">
+                <div className="flex flex-col bg-white p-5 m-5 rounded-md ">
                     <div className="flex flex-row mb-8 justify-between">
                         <div className="flex flex-col"><h1 className="text-slate-900 text-xl font-bold">Billing Info</h1> <p className="text-slate-400 text-base ">Please enter your billing info</p></div>
                         <div><p className="text-slate-400 text-base ">Step 1 of 4</p></div>
                     </div>
 
                     <div>
-                        <div className="flex flex-row ">
+                        <div className="flex flex-col lg:flex-row">
                             <label className="mr-8 rounded-md">
                                 <h1>Name</h1>
                                 <input type="text" placeholder="Your name" className="bg-slate-100 pr-20 pl-8 py-3 mt-3" />
@@ -26,7 +26,7 @@ export default function Payment() {
                             </label>
                         </div>
 
-                        <div className="flex flex-row mr-5 mt-5">
+                        <div className="flex flex-col lg:flex-row mr-5 mt-5">
                             <label className="mr-8 rounded-md">
                                 <h1>Address</h1>
                                 <input type="text" placeholder=" Address" className="bg-slate-100 pr-20 pl-8 py-3 mt-3" />
@@ -54,7 +54,7 @@ export default function Payment() {
                                 <Image src={'/images/mark.png'} alt='' width={100} height={100} className="w-[20px] h-[20px] mr-2" />
                                 <h1>Pick-Up</h1>
                             </div>
-                            <div className="flex flex-row mt-5">
+                            <div className="flex flex-col min-w-max lg:flex-row">
                                 <label className="mr-8 rounded-md">
                                     <h1>Location</h1>
                                     <input type="text" placeholder="Select Your city" className="bg-slate-100 pr-20 pl-8 py-3 mt-3" />
@@ -79,7 +79,7 @@ export default function Payment() {
                                 <Image src={'/images/mark.png'} alt='' width={100} height={100} className="w-[20px] h-[20px] mr-2" />
                                 <h1 >Drop-Off</h1>
                             </div>
-                            <div className="flex flex-row mt-4">
+                            <div className="flex flex-col min-w-max lg:flex-row">
                                 <label className="mr-8 rounded-md">
                                     <h1>Location</h1>
                                     <input type="text" placeholder="Select Your city" className="bg-slate-100 pr-20 pl-8 py-3 mt-3" />
@@ -110,7 +110,7 @@ export default function Payment() {
                     </div>
 
                     <div className='bg-slate-100 w-[95%] rounded-md  mx-auto p-5'>
-                        <div className='flex flex-row items-center justify-between mb-4'>
+                        <div className='flex flex-row items-center justify-between mb-4 '>
                             <div className='flex flex-row items-center'>
                                 <Image src={'/images/mark.png'} alt='' width={100} height={100} className='w-5 h-5 mr-3' />
                                 <h1>Credit Card</h1>
@@ -119,8 +119,8 @@ export default function Payment() {
                                 <Image src={'/images/Visa.png'} alt='' width={100} height={100} />
                             </div>
                         </div>
-                        <div className="flex flex-row ">
-                            <label className="mr-8 rounded-md">
+                        <div className="flex flex-col min-w-max lg:flex-row">
+                            <label className="mr-8 rounded-md ">
                                 <h1>Card Number</h1>
                                 <input type="number" placeholder="Card number" className="bg-white pr-20 pl-8 py-3 mt-3 rounded-md" />
                             </label>
@@ -131,7 +131,7 @@ export default function Payment() {
                             </label>
                         </div>
 
-                        <div className="flex flex-row mr-5 mt-5">
+                        <div className="flex flex-col min-w-max lg:flex-row">
                             <label className="mr-8 rounded-md">
                                 <h1>Card Holder</h1>
                                 <input type="text" placeholder="Card holder" className="bg-white pr-20 pl-8 py-3 mt-3 rounded-md" />
@@ -172,7 +172,7 @@ export default function Payment() {
                 </div>
 
                 {/* step 04 */}
-                <div className="flex flex-col bg-white p-5 m-5 rounded-md">
+                <div className="flex flex-col bg-white p-5 m-5 rounded-md ">
                     <div className="flex flex-row mb-8 justify-between">
                         <div className="flex flex-col"><h1 className="text-slate-900 text-xl font-bold">Confirmation</h1> <p className="text-slate-400 text-base ">We are getting to the end. Just few clicks and your rental is ready!</p></div>
                         <div><p className="text-slate-400 text-base ">Step 1 of 4</p></div>
@@ -202,8 +202,8 @@ export default function Payment() {
             </div>
 
             {/* right div */}
-            <div className="flex flex-col bg-white p-5 m-5 rounded-md h-auto">
-                <div className="flex flex-col"><h1 className="text-slate-900 text-xl font-bold">Rental Summary</h1> <p className="text-slate-400 text-base ">Prices may change depending on the length of the rental and the price of your rental car.</p></div>
+            <div className="flex flex-col bg-white p-5 m-5 rounded-md max-h-min">
+                <div className="flex flex-col"><h1 className="text-slate-900 text-xl font-semibold">Rental Summary</h1> <p className="text-slate-400 text-base ">Prices may change depending on the length of the rental and the price of your rental car.</p></div>
                 <div className='mt-5 flex flex-row'>
                     <Image src={'/images/View 1.png'} alt='' width={100} height={100} className='w-[132px] h-[108px] mr-5 ' />
                     <div>
@@ -211,9 +211,32 @@ export default function Payment() {
                         <Image src={'/images/Reviews.png'} alt='' width={100} height={100} className='w-[220px] h-[24px] ' />
                     </div>
                 </div>
+                <hr className="m-6"/>
+                <div className="flex flex-col justify-center px-2">
+                    <div className="flex flex-row justify-between mb-2">
+                        <h1 className="text-base text-slate-400">Subtotal</h1>
+                        <p className="text-base text-slate-900 font-semibold">$80.00</p>
+                    </div>
+                    <div className="flex flex-row justify-between mb-2">
+                        <h1 className="text-base text-slate-400">Tax</h1>
+                        <p className="text-base text-slate-900 font-semibold">$0</p>
+                    </div>
+                    <div className="flex flex-row bg-slate-100 p-5 justify-between items-center rounded-lg ">
+                        <p className="text-base text-slate-400">Apply promo code</p>
+                        <button className="text-base text-slate-900 font-semibold">Apply now</button>
+                    </div>
+                    <div className="flex flex-row justify-between mt-5">
+                        <div>
+                            <h1 className="text-xl text-slate-900 font-semibold ">Total Rental Price</h1>
+                            <p className="text-base text-slate-400">Overall price and includes rental discounts</p>
+                        </div>
+                        <div>
+                            <h1 className="text-4xl font-bold text-slate-900 ">$80.00</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
+            <Footer />
         </main>
     )
 }

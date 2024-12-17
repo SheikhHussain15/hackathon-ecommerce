@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Cards from '@/components/cards';
 import Footer from "@/components/footer";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
             <h1 className="text-white text-2xl md:text-3xl font-bold">The Best Platform <br />  for Car Rental</h1>
             <p className="text-white text-sm md:text-base mt-2">Ease of doing a car rental safely and reliably, Of course at a low price</p>
 
-            <button className="bg-blue-700 px-5 py-3 rounded-sm text-white mt-4">Rental Car</button>
+            <Link href={'/Category'}><button className="bg-blue-700 px-5 py-3 rounded-sm text-white mt-4">Rental Car</button></Link>
           </div>
 
         </div>

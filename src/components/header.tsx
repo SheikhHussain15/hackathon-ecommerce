@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
     return (
-        <header className="bg-white py-4 px-6 md:px-8 shadow-md flex items-center justify-between flex-wrap">
+        <header className="bg-white py-4 px-6 md:px-8 flex items-center justify-between flex-wrap">
             {/* Logo and Search Section */}
             <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
                 {/* Logo */}
