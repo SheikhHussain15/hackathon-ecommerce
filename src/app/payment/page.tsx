@@ -2,6 +2,7 @@ import Image from "next/image";
 import Footer from '@/components/footer';
 export default function Payment() {
     return (
+        <>
         <main className="bg-slate-100 font-sans flex flex-col-reverse justify-center  lg:flex-row ">
             {/* Left Div */}
             <div className="flex flex-col justify-center w-screen">
@@ -236,7 +237,8 @@ export default function Payment() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </main>
+        <Footer />
+        </>
     )
 }
