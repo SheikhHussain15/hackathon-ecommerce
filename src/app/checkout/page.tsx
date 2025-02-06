@@ -74,8 +74,8 @@ const CheckOut = () => {
             await client.create(orderData);
             
             Swal.fire("Success!", "Your order has been placed.", "success");
-        } catch (error) {
-            Swal.fire("Error", "Something went wrong. Try again!", "error");
+        } catch (error:any) {
+            Swal.fire("Error", "Something went wrong. Try again!", error);
         }
     };
 

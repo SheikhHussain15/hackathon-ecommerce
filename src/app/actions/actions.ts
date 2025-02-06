@@ -1,4 +1,3 @@
-import { NumberDefinition } from "sanity"
 import { Car } from "../../../types/cars"
 
 export const addToCart = (car : Car) => {
