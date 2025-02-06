@@ -21,7 +21,7 @@ export default function CheckOut() {
         email: "",
     });
 
-    const [formErrors, setFormErrors] = useState<Record<string, boolean>>({});
+    const [formErrors, setFormErrors] = useState<Record<keyof typeof formValues, boolean>>();
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -46,14 +46,18 @@ export default function CheckOut() {
     };
 
     const validateForm = () => {
-        const errors = Object.keys(formValues).reduce((acc, key) => {
-            acc[key] = !formValues[key as keyof typeof formValues];
-            return acc;
-        }, {} as Record<string, boolean>);
-
+        const errors: Record<keyof typeof formValues, boolean> = Object.keys(formValues).reduce(
+            (acc, key) => {
+                acc[key as keyof typeof formValues] = !formValues[key as keyof typeof formValues];
+                return acc;
+            },
+            {} as Record<keyof typeof formValues, boolean>
+        );
+    
         setFormErrors(errors);
         return Object.values(errors).every((error) => !error);
     };
+    
 
     const handlePlaceOrder = () => {
         if (validateForm()) {
