@@ -53,11 +53,11 @@ export default function CheckOut() {
             },
             {} as Record<keyof typeof formValues, boolean>
         );
-    
+
         setFormErrors(errors);
         return Object.values(errors).every((error) => !error);
     };
-    
+
 
     const handlePlaceOrder = () => {
         if (validateForm()) {
@@ -80,6 +80,21 @@ export default function CheckOut() {
                     </nav>
                 </div>
             </div>
+
+            {Object.keys(formValues).map((key) => (
+                <div key={key}>
+                    <input
+                        id={key}
+                        value={formValues[key as keyof typeof formValues]}
+                        onChange={handleInputChange}
+                        className="border rounded p-2 w-full"
+                    />
+                    {formErrors?.[key as keyof typeof formValues] && (
+                        <p className="text-red-500 text-sm">This field is required</p>
+                    )}
+                </div>
+            ))}
+
 
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -115,6 +130,12 @@ export default function CheckOut() {
                             <p className="text-lg font-semibold">Total: ${(subTotal - discount).toFixed(2)}</p>
                         </div>
                     </div>
+                    <button
+                        onClick={handlePlaceOrder}
+                        className="bg-blue-500 text-white p-3 rounded hover:bg-blue-600"
+                    >
+                        Place Order
+                    </button>
                 </div>
             </div>
         </div>
