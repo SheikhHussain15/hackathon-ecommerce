@@ -90,11 +90,6 @@ const Cards = () => {
               <div>
                 <p className="text-blue-500 font-bold">{car.pricePerDay}</p>
               </div>
-              <Link href={'/payment'}>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                  Rent Now
-                </button>
-              </Link>
 
               {/* new button */}
               <button
@@ -112,6 +107,11 @@ const Cards = () => {
         <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
           Show More Cars
         </button>
+        <Link href='/cart'>
+        <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 ml-5">
+          Cart
+        </button>
+        </Link>
       </div>
     </div>
   );

@@ -91,11 +91,6 @@ const Cards3 = () => {
               <div>
                 <p className="text-blue-500 font-bold">{car.pricePerDay}</p>
               </div>
-              <Link href={'/payment'}>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                  Rent Now
-                </button>
-              </Link>
 
               {/* new button */}
               <button
