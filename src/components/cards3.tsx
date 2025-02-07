@@ -1,4 +1,4 @@
-
+'use client'
 import React, { useEffect, useState } from "react";
 import { Car } from "../../types/cars";
 import { client } from "@/sanity/lib/client";
