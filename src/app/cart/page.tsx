@@ -69,7 +69,7 @@ const CartPage = () => {
                 Swal.fire('Success', 'Your order has been successfully processed',
                     'success');
 
-                router.push('/checkout')
+                router.push('/payment')
                 setCartItems([]);
             }
         });
