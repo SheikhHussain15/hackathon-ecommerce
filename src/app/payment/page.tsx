@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Car } from "../../../types/cars";
 import { urlFor } from "@/sanity/lib/image";
 import { CgChevronRight } from "react-icons/cg";
-import { AiOutlineCheckCircle } from "react-icons/ai";
 import Footer from "@/components/footer";
 
 export default function CheckOut() {
